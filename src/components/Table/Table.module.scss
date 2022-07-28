@@ -1,0 +1,344 @@
+@import "./src/assets/styles/main";
+
+table {
+  table-layout: fixed;
+}
+
+.TableWrapper {
+  background-color: $color-grey-light;
+  border-radius: 10px;
+  width: 100%;
+  @include medium {
+    background-color: transparent;
+  }
+}
+
+.HistoryOfCases {
+  @extend .TableWrapper;
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid $color-middle-grey;
+  }
+
+  th:nth-child(1) {
+    width: 15%;
+  }
+
+  th:nth-child(2) {
+    width: 22%;
+  }
+
+  th:nth-child(3) {
+    width: 25%;
+  }
+
+  th:nth-child(4) {
+    width: 10%;
+  }
+
+  th:nth-child(5) {
+    width: 15%;
+  }
+
+  th:nth-child(6) {
+    width: 13%;
+  }
+}
+
+.HistoryOfExchanging {
+  @extend .TableWrapper;
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid $color-middle-grey;
+  }
+
+  th:nth-child(1) {
+    width: 25%;
+  }
+
+  th:nth-child(2) {
+    width: 50%;
+  }
+
+  th:nth-child(3) {
+    width: 25%;
+  }
+}
+
+.SavedCasesTable {
+  @extend .TableWrapper;
+
+  thead {
+    tr {
+      th:nth-child(2) {
+        padding-left: 4.5rem;
+      }
+    }
+  }
+
+  th:nth-child(1) {
+    width: 14%;
+  }
+
+  th:nth-child(2) {
+    width: 30%;
+  }
+
+  th:nth-child(3) {
+    width: 18%;
+  }
+
+  th:nth-child(4) {
+    width: 12%;
+  }
+
+  th:nth-child(5) {
+    width: 12%;
+  }
+
+
+}
+
+
+.TableHeader {
+  border-bottom: 1px solid $color-border-grey-light;
+  font-size: 1.6rem;
+  color: $color-font-dark;
+  @include large {
+    font-size: 2rem;
+  }
+
+  tr {
+    th {
+      font-weight: 600;
+    }
+  }
+}
+
+//.TableCustomRowWrapper {
+//  position: relative;
+//  display: table-row;
+//  height: 5.8rem;
+//
+//  td:nth-child(1) {
+//    padding: 0 0 0 0.8rem;
+//    span {
+//      height: 4rem;
+//      background-color: #FFFFFF;
+//      display: flex;
+//      align-items: center;
+//      padding-left: 3rem;
+//      border-top-left-radius: 10px;
+//      border-bottom-left-radius: 10px;
+//
+//      span {
+//        height: 3rem;
+//      }
+//    }
+//
+//  }
+//
+//  td:nth-child(2) {
+//    padding-left: 0;
+//    div {
+//      height: 4rem;
+//      background-color: #FFFFFF;
+//      width: 100%;
+//      padding-left: 4rem;
+//    }
+//  }
+//  td:nth-child(3) {
+//    padding: 0.5rem 0 0 0;
+//    span {
+//      height: 4rem;
+//      background-color: #FFFFFF;
+//      display: flex;
+//      align-items: center;
+//      padding-left: 2rem;
+//
+//      span {
+//        height: 3rem;
+//      }
+//    }
+//  }
+//  td:nth-child(4) {
+//    padding-right: 0.8rem;
+//    padding-left: 0;
+//
+//    div {
+//      width: 100%;
+//      height: 4rem;
+//      display: flex;
+//      align-items: center;
+//      background-color: #FFFFFF;
+//      border-top-right-radius: 10px;
+//      border-bottom-right-radius: 10px;
+//    }
+//  }
+//}
+
+.TableNoRequests {
+  margin: 0 auto;
+  text-align: center;
+  color: $color-primary-grey-caret;
+  font-size: 1.6rem;
+
+  svg {
+    margin-right: 6px;
+  }
+}
+
+.TableDesktop {
+  width: 100%;
+  font-size: 1.8rem;
+  color: black;
+  text-align: left;
+
+  th {
+    padding: 2rem 0 2rem 4rem;
+  }
+
+  td {
+    padding: 1.5rem 2rem 1.5rem 4rem;
+    position: relative;
+
+
+    &:hover {
+
+      p {
+        display: block;
+      }
+    }
+
+    p {
+      background-color: white;
+      display: none;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      padding: 2px;
+      border: 1px solid #6e7078;
+      white-space: nowrap;
+      transform: translate(10%, -100%);
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 3rem;
+
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
+}
+
+.TableDesktopNotResponsive {
+  width: 100%;
+}
+
+/*--------------------------------MOBILE TABLE--------------------------------*/
+.TableMobile {
+  display: none;
+
+  .TableMobileAddButton {
+    display: flex;
+    flex-grow: 1;
+
+    button {
+      margin: 0;
+    }
+  }
+
+  .TableMobileData {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+
+  @include medium {
+    display: block;
+  }
+}
+
+.TableMultipleSelect {
+  width: 100%;
+  border: none;
+  overflow: visible;
+  min-height: 100%;
+
+  .TableMultipleSelectOption {
+    padding: 1rem;
+  }
+}
+
+.GiftChallengeParticipants {
+  @extend .TableWrapper;
+
+  margin-bottom: 3.2rem;
+
+  .TableHeader {
+    th:nth-child(2) {
+      padding: 2rem 0 2rem 7rem;
+    }
+  }
+
+  tr {
+    height: 5.8rem;
+  }
+
+  th:nth-child(1) {
+    width: 10%;
+  }
+
+  th:nth-child(2) {
+    width: 36%;
+  }
+
+  th:nth-child(3) {
+    width: 36%;
+  }
+
+  th:nth-child(4) {
+    width: 18%;
+  }
+}
+
+.GiftChallengeFinishCasesTable {
+  @extend .TableWrapper;
+
+  .TableHeader {
+    th:nth-child(1) {
+      padding: 2rem 0 2rem 2rem;
+    }
+  }
+
+  th:nth-child(1) {
+    width: 16%;
+  }
+
+  th:nth-child(2) {
+    width: 42%;
+  }
+
+  th:nth-child(3) {
+    width: 42%;
+  }
+
+  td:nth-child(1) {
+    padding: 2rem 0 2rem 2rem;
+  }
+
+  td:nth-child(2) {
+    padding: 2rem 0 2rem 4rem;
+  }
+
+  td:nth-child(3) {
+    padding: 2rem 0 2rem 4rem;
+  }
+}
+
+
+
+

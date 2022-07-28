@@ -1,0 +1,98 @@
+@import "./src/assets/styles/main";
+
+.TableMobileDataItem {
+  &:first-child {
+    padding-top: 2rem;
+  }
+
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+
+
+  @include medium {
+    background-color: $color-grey-light;
+
+  }
+  @include smallest {
+    background-color: $color-grey-light;
+    width: 100%;
+  }
+}
+
+.TableRowDelete {
+  position: absolute;
+
+  background-color: $color-main-orange;
+  padding: 6px;
+  border-radius: 7px;
+  line-height: 1;
+  text-align: center;
+
+  svg {
+    color: white;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    right: 5%;
+    bottom: 2rem;
+  }
+}
+
+.TableMobileDataRow {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: column;
+}
+
+.TableMobileDataTab {
+  display: flex;
+  flex-direction: row;
+}
+
+.TableMobileItemHeader {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 16px;
+
+}
+
+.TableMobileItemValue {
+  font-size: 18px;
+}
+
+.TableMobileButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto 2rem;
+  @include smallest {
+    width: 100%;
+  }
+
+  div {
+
+    @include medium {
+      width: 100%;
+    }
+  }
+}
+
+.MobileRow {
+  position: relative;
+
+
+  margin-bottom: 3rem;
+
+  .MobileTabRow {
+    background-color: $color-main-orange;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    right: 1rem;
+  }
+}

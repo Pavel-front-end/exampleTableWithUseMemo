@@ -1,0 +1,32 @@
+@import "./src/assets/styles/main";
+
+.PaginationBlock {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.Flex {
+  display: flex;
+  align-items: center;
+}
+
+.PageNumber {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.ActivePage {
+  background-color: $color-main-orange;
+  border-radius: 100%;
+  color: #FFF
+}
+
+.ArrowButton {
+  cursor: pointer;
+  &:disabled {
+    opacity: 50%;
+  }
+}

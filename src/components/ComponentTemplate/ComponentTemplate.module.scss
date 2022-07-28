@@ -1,0 +1,265 @@
+@import "./src/assets/styles/main";
+
+.ComponentTemplate {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 5rem;
+
+    @include medium {
+      font-size: 3rem;
+    }
+  }
+
+  @include smallest {
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ComponentTemplateBack {
+  font-size: 1.8rem;
+
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $color-font-dark;
+
+    svg {
+      margin-right: 6px;
+    }
+
+    p {
+      font-weight: 600;
+      color: $color-font-dark;
+
+
+      span {
+        color: $color-main-orange;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  @include medium {
+    margin-bottom: 2rem;
+  }
+}
+
+.ComponentTemplateOrange {
+  font-size: 1.6rem;
+  color: $color-main-orange;
+  font-weight: 600;
+  line-height: 1.5;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 0.6rem;
+    }
+  }
+}
+
+.ComponentTemplateBackSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 2.4rem;
+
+  &:last-child {
+    align-items: flex-end;
+  }
+}
+
+.ComponentTemplateHeaderSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 1.6rem;
+  padding-bottom: 3.2rem;
+
+  @include medium {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.AddPointBtn {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: $color-main-orange;
+  cursor: pointer;
+
+  @include smallest {
+    font-size: 1.8rem;
+  }
+
+}
+
+.CaseNameWrap {
+  display: flex;
+  flex-direction: row;
+
+  @include medium {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.CaseName {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $color-font-dark;
+  margin-right: 3rem;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @include medium {
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: auto;
+    font-size: 2rem;
+    align-items: center;
+  }
+
+  @include smallest {
+    margin-right: 1rem;
+  }
+
+  svg {
+    color: $color-main-orange;
+    margin-right: 1rem;
+  }
+}
+
+.ProfilePageButtons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 3.2rem;
+}
+
+.ProfileCreateButton {
+  position: relative;
+}
+
+.TextLinkUnderlined {
+  color: $color-main-orange;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-bottom: 1px dashed;
+  cursor: pointer;
+}
+
+.ProfileActionsMenu {
+  min-width: 14.5rem;
+  border: 2px solid $color-main-orange;
+  color: $color-main-orange;
+  border-radius: 2.8rem;
+  padding: 1.4rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    margin-right: 0.8rem;
+  }
+}
+
+.ProfileMenuList {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  box-shadow: 0 2px 13px -2px rgba(0, 0, 0, 0.14);
+  z-index: 2;
+  background-color: #FFFFFF;
+}
+
+.ProfileActionMenuActive {
+  background-color: $color-main-orange-blur;
+}
+
+.BalanceInfoWrapper {
+  border: 1px solid $color-middle-grey;
+  border-radius: 39px;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1.6rem 0.6rem 1.3rem;
+  min-height: 6.8rem;
+
+  svg {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    @include large {
+      width: 5.25rem;
+      height: 5.25rem;
+    }
+  }
+}
+
+.BalanceInfoCount {
+  margin-right: 1.2rem;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.TextSecondary {
+  font-size: 1.4rem;
+  color: $color-primary-grey-darker;
+  line-height: 1.43;
+}
+
+.TokensCountText {
+  font-size: 2.4rem;
+  line-height: 1.54;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+.ProfileNavLink {
+  color: $color-font-dark;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #FFFFFF;
+  padding: 1.6rem;
+
+  span {
+    color: $color-font-dark;
+    white-space: nowrap;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-grey-lighter;
+  }
+}
+
+.ComponentTemplateActionMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1.6rem;
+}
+
+.ComponentTemplateLink {
+  display: flex;
+  align-items: center;
+}

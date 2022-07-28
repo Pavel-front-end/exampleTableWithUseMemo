@@ -1,0 +1,186 @@
+@import "./src/assets/styles/main";
+
+.DefaultCell {
+
+  span {
+    @include medium{
+      display: none;
+    }
+  }
+
+  p {
+    z-index: 1999;
+    background-color: white;
+
+    @include medium {
+      background-color: unset;
+    }
+  }
+}
+
+svg {
+  margin-right: 6px;
+  width: 13px;
+  height: 18px;
+}
+
+.LocationCell {
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: $color-main-orange;
+    margin-right: 6px;
+  }
+}
+
+.LocationAddressCell {
+  @extend .LocationCell;
+
+  svg {
+    min-width: 24px;
+    height: 24px;
+  }
+}
+
+.DeleteCaseCell {
+  @extend .LocationAddressCell;
+  font-weight: 600;
+  color: $color-font-dark;
+  font-size: 1.6rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.WasteTypes {
+  color: $color-primary-grey-darker;
+
+  svg {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.EditCell {
+  color: $color-main-orange;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 500;
+  text-align: center;
+
+  a {
+    color: $color-main-orange;
+  }
+  
+  @include medium {
+    font-size: 16px;
+    padding: 6px 12px;
+    border: 2px solid $color-main-orange;
+    border-radius: 20px;
+  }
+
+  svg {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    vertical-align: initial;
+  }
+
+  path {
+    fill: $color-main-orange;
+  }
+
+  .InProgressIcon {
+    top: 2px;
+  }
+}
+
+.OrangeText {
+  color: $color-main-orange;
+}
+
+.StatusWithBulletCell {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  span {
+    font-size: 1.6rem;
+    color: $color-font-dark;
+  }
+}
+
+.StatusBullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.CaseDetails {
+  margin: 0 auto;
+  text-align: center;
+
+  a {
+    color: $color-main-orange;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: $color-main-orange;
+    }
+  }
+
+  @include medium {
+    padding: 6px 12px;
+    border: 2px solid $color-main-orange;
+    border-radius: 20px;
+    width: 100%;
+    a {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+  @include smallest {
+    width: 100%;
+  }
+}
+
+.GCParticipantCell {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  position: absolute;
+
+  @include medium {
+    position: unset;
+  }
+}
+
+.GiftChallengeWinnerBadge {
+  width: 18px;
+  height: 32px;
+}
+
+.ParticipantAvatar {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.GiftChallengeContactInfo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $color-main-orange;
+  cursor: pointer;
+}
